@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-style: none;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+h1, p {
+  padding: 0;
+  margin: 0;
+}
+
+.dollar a {
+  background-color: #222222;
+  width: 2em;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em 0 0.5em 0;
+  color: #f4bc16;
+  display: block;
+}
+
+.header > .left {
+  border: 0.2em white solid;
+  border-radius: 100%;
+  width: 1.6em;
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.2em 0 0.2em 0;
+}
+
+.header > .right > a {
+  color: white;
+  opacity: 0.5;
+}
+
+.bottom > i {
+  color: white;
+  font-size: 3em;
+}
+
+.calculator {
+  background-color: #307ec1;
+}
+
+.section {
+  background-color: #f4bc16;
+  height: 100vh;
+}
+
+input {
+  border-radius: 10em;
+  height: 2.5em;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.calculator {
+  position: relative;
+}
+.calculator .dollar a {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.calculator .con-wrap {
+  margin: auto;
+  width: 85vw;
+  height: 100vh;
+  position: relative;
+}
+.calculator .con-wrap .header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 4em;
+}
+.calculator .con-wrap .header .left {
+  margin-right: 1em;
+}
+.calculator .con-wrap .header .right > a {
+  margin-right: 1em;
+}
+.calculator .con-wrap .middle {
+  color: white;
+}
+.calculator .con-wrap .middle h1 {
+  margin: 0.5em 0;
+}
+.calculator .con-wrap .middle p {
+  line-height: 150%;
+  font-weight: lighter;
+  margin-bottom: 3em;
+}
+.calculator .con-wrap .main {
+  width: 100%;
+  margin-top: 4em;
+}
+.calculator .con-wrap .main ul li {
+  border-bottom: thin white dotted;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
+  font-size: 1.3em;
+  opacity: 0.5;
+}
+.calculator .con-wrap .main .total {
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 3em;
+}
+.calculator .con-wrap .main .total h1 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin-bottom: 0.2em;
+}
+.calculator .con-wrap .main .total h3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  font-weight: lighter;
+}
+
+.section {
+  position: relative;
+}
+.section .dollar a {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.section .con-wrap {
+  margin: auto;
+  width: 85vw;
+  height: 100vh;
+}
+.section .con-wrap .header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 4em;
+}
+.section .con-wrap .header .left {
+  margin-right: 1em;
+}
+.section .con-wrap .header .right > a {
+  margin-right: 1em;
+}
+.section .con-wrap .middle {
+  color: white;
+}
+.section .con-wrap .middle h1 {
+  margin: 0.5em 0;
+}
+.section .con-wrap .middle p {
+  line-height: 150%;
+  font-weight: lighter;
+  margin-bottom: 3em;
+}
+.section .con-wrap .main {
+  width: 100%;
+}
+.section .con-wrap .bottom {
+  position: absolute;
+  right: 0.2em;
+  bottom: 0.5em;
+}
+
+.section2 {
+  position: relative;
+}
+.section2 .bg-wrap {
+  background-color: #222222;
+  position: absolute;
+  width: 100vw;
+  height: 64vh;
+  bottom: 0;
+  left: 0;
+}
+.section2 .bg-wrap .plus-button {
+  background-color: white;
+  border-radius: 100%;
+  width: 3.5em;
+  height: 3.5em;
+  position: absolute;
+  top: -2em;
+  right: 3em;
+}
+.section2 .bg-wrap .plus-button i {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 2em;
+}
+.section2 .bg-wrap .main ul li {
+  border-bottom: thin white dotted;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=style.css.map */

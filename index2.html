@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="css/style2.css">
+
+
+</head>
+<body>
+
+	<div class="section section1 current" id="section1">
+
+		<a class="button-dollar" href="#"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+		<header>
+			<div class="nav">
+				<div class="circle-number"><p>1</p></div>
+				<ul class="circle-mini">
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="name">
+				<h1>Information</h1>
+				<p>Fill your trip details in the form for transport recommendations</p>
+			</div>
+		</header>
+
+		<main>
+			
+			<input id="ppl" class="ppl" type="text" placeholder="How many people?">
+			<input id="days" class="days" type="text" placeholder="How many days?">
+			
+		</main>
+
+		<footer>
+			<a href="#"><i class="fa fa-angle-left fa-3x section1-prev" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-angle-right fa-3x section1-next" aria-hidden="true"></i></a>
+		</footer>
+
+	</div>
+
+
+	<div class="section section2">
+		
+		<a class="button-dollar" href="#"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+		<header>
+			<div class="nav">
+				<div class="circle-number"><p>2</p></div>
+				<ul class="circle-mini">
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="name">
+				<h1>Recommendation</h1>
+				<p>Check the list of suitable transport for your trip</p>
+			</div>
+		</header>
+
+		<main>
+			<!-- <div class="button-plus"><a href="#">+</a></div> -->
+			<ul class="CarList">
+				<li class="CarList1">
+					<i class="fa fa-car" aria-hidden="true"></i>
+					<div class="text"><h3>Small Car</h3> <h5 id="SmallCarPrice" data-price=129>$129</h5></div>
+
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+					<i class="fa fa-check-circle CarAddButton" id="SmallCarButton" aria-hidden="true"></i>
+				</li>
+
+				<li class="CarList2">
+					<i class="fa fa-bus" aria-hidden="true"></i></i>
+					<div class="text"><h3>Large Car</h3> <h5 id="LargeCarPrice" data-price=144>$144</h5></div>
+
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+					<i class="fa fa-check-circle CarAddButton" id="LargeCarButton" aria-hidden="true"></i>
+				</li>
+
+				<li class="CarList3">
+					<i class="fa fa-motorcycle" aria-hidden="true"></i></i>
+					<div class="text"><h3>Motorbike</h3> <h5 id="MortobikePrice" data-price=109>$109</h5></div>
+
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+					<i class="fa fa-check-circle CarAddButton" id="MortobikeButton" aria-hidden="true"></i>
+				</li>
+
+				<li class="CarList4">
+					<i class="fa fa-train" aria-hidden="true"></i></i>
+					<div class="text"><h3>Motor home</h3> <h5 id="MortoHomePrice" data-price=200>$200</h5></div>
+
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+					<i class="fa fa-check-circle CarAddButton" id="MortoHomeButton" aria-hidden="true"></i>
+				</li>
+
+			</ul>
+		</main>
+
+		<footer>
+			<a href="#"><i class="fa fa-angle-left fa-3x section2-prev" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-angle-right fa-3x section2-next" aria-hidden="true"></i></a>
+		</footer>
+
+	</div>
+
+	<div class="section sectionInfor">
+
+		<a class="button-dollar" href="#"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+		<header>
+			<div class="nav">
+				<div class="circle-number"><p><i class="fa fa-car" aria-hidden="true"></i></p></div>
+			</div>
+
+			<div class="name">
+				<h1>Small Car</h1>
+				<p>$109/day, min 1 day, max 5 days 3.7L/100km</p>
+			</div>
+		</header>
+
+		<main>
+			<ul>
+				<li>
+					<div class="name">Car</div>
+					<div class="price">$109.00</div>
+				</li>
+
+				<li>
+					<div class="name">Days</div>
+					<div class="price">x 5Days</div>
+				</li>
+
+			</ul>
+
+			<div class="total">
+				<h1>$0.00</h1>
+				<h3>$0.00 per person</h3>
+			</div>
+
+		</main>
+
+		<footer>
+			<a href="#"><i class="fa fa-angle-left fa-3x sectionInfor-prev" aria-hidden="true"></i></a>
+		</footer>
+
+
+	</div>
+
+	<div class="section section3">
+	
+		<a class="button-dollar" href="#"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+			<header>
+				<div class="nav">
+					<div class="circle-number"><p>3</p></div>
+					<ul class="circle-mini">
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="name">
+					<h1>Fuel fee</h1>
+					<p>Select your start and end. Check your expected distance and fuel fee!</p>
+				</div>
+			</header>
+
+			<main>
+
+				<form>
+					<select id="StartFrom" class="StartFrom" placeholder="Start from">
+					    <option>Start</option>
+					    <option value="Auckland">Auckland</option>
+					    <option value="Wellington">Wellington</option>
+					    <option value="Christchurch">Christchurch</option>
+					</select>
+					
+					<select id="StartTo" class="StartTo" placeholder="Start to">
+					    <option>End</option>
+					    <option value="Auckland">Auckland</option>
+					    <option value="Wellington">Wellington</option>
+					    <option value="Christchurch">Christchurch</option>
+					</select>
+				</form>
+
+				<ul>
+					<li>
+					 	<div class="name">Expected distance</div>
+					 	<div class="Km">0km</div>
+					</li>
+
+					<li>
+					 	<div class="name">Expected liter</div>
+					 	<div class="L">0 L</div>
+					</li>
+
+				</ul>
+
+				<div class="total">
+					<h1 class="TotalFuelFee">$0.00</h1>
+					<h3 class="FuelFeePer">$0.00 per person</h3>
+				</div>
+				
+			</main>
+
+			<footer>
+				<a href="#"><i class="fa fa-angle-left fa-3x section3-prev" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-angle-right fa-3x section3-next" aria-hidden="true"></i></a>
+			</footer>
+	</div>
+
+
+	<div class="section section4">
+			
+			<a class="button-dollar" href="#"><i class="fa fa-usd" aria-hidden="true"></i></a>
+
+			<header>
+				<div class="nav">
+					<div class="circle-number"><p>4</p></div>
+					<ul class="circle-mini">
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-circle" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="name">
+					<h1>Total fee</h1>
+					<p>Here is the total expected cost. Have a safe trip!</p>
+				</div>
+			</header>
+
+			<main>
+
+				<ul>
+					<li>
+					 	<div class="name">Total Cost</div>
+					 	<div class="T-totalCost">$ 0.00</div>
+					</li>
+
+					<li>
+					 	<div class="name">Per Person</div>
+					 	<div class="T-totalCostP">$ 0.00</div>
+					</li>
+
+				</ul>
+				
+			</main>
+
+			<footer>
+				<a href="#"><i class="fa fa-angle-left fa-3x section4-prev" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-angle-right fa-3x section4-next" aria-hidden="true"></i></a>
+			</footer>
+
+	</div>
+
+
+	<div class="calculator">
+	
+		<a class="button-dollar button-dollar-c" id="button-dollar" href="#"><i class="fa fa-car" aria-hidden="true"></i></a>
+
+			<header>
+				<div class="nav">
+					<div class="circle-number"><p>$</p></div>
+				</div>
+
+				<div class="name">
+					<h1>Calculator</h1>
+					<p>Here is your expected transport fee for your trip!</p>
+				</div>
+			</header>
+				
+			<main>
+
+				<ul>
+					<li>
+					 	<div class="name">Car</div>
+					 	<div class="C-car">$ 0.00</div>
+					</li>
+
+					<li>
+					 	<div class="name">Days</div>
+					 	<div class="C-days">x 0 days</div>
+					</li>
+
+					<li>
+					 	<div class="name">Fuel</div>
+					 	<div class="C-fuel">$0.00</div>
+					</li>
+
+				</ul>
+				
+				<div class="total">
+					<h1 class="C-totalCost">$0.00</h1>
+					<h3 class="C-totalCostP">$0.00 perperson</h3>
+				</div>
+
+			</main>
+			
+
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

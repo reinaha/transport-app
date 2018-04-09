@@ -1,0 +1,314 @@
+// ---------- colors ----------//
+
+$bg-yellow: #F4BC16;
+$bg-black: #222222;
+$bg-white: #fff;
+$bg-red: #C71100;
+$bg-green: #96CF1B;
+$bg-blue: #307EC1;
+
+// ---------- buttons ----------//
+
+@mixin dollar-button(){
+	background-color: $bg-black;
+	width: 2em;
+	text-align: center;
+	font-size: 2em;
+	padding: 0.5em 0 0.5em 0;
+}
+
+@mixin number-button(){
+	border: 0.2em $bg-white solid;
+	border-radius: 100%;
+	width: 1.6em;
+	color: $bg-white;
+	font-weight: bolder;
+	font-size: 2em;
+	text-align: center;
+	padding: 0.2em 0 0.2em 0;
+}
+
+@mixin circle-opacity(){
+	color: $bg-white;
+	opacity: 0.5;
+}
+
+@mixin form-style(){
+	border-radius: 10em;
+	height: 2.5em;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+@mixin calculator-form(){
+	border-bottom: thin $bg-white dotted;
+	color: $bg-white;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2em;
+	padding-bottom: 0.5em;
+	font-size: 1.3em;
+	opacity: 0.5;
+}
+
+@mixin calculator-total-form() {
+	color: $bg-white;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	text-align: right;
+}
+
+// ---------- setting ----------//
+
+
+* {
+	padding:0;
+	margin:0;
+	font-style: none;
+	border: none;
+	list-style-type: none;
+	text-decoration: none;
+	letter-spacing: 0.03em;
+}
+
+h1, p {
+	padding:0;
+	margin:0;
+}
+
+// ---------- css-icons ----------//
+
+.dollar {
+	
+	a {
+		@include dollar-button();
+		color: $bg-yellow;
+		display: block;
+	}
+}
+
+.header>.left {
+	@include number-button();
+}
+
+.header>.right>a {
+	@include circle-opacity;
+}
+
+.bottom>i {
+	color: $bg-white;
+	font-size: 3em;
+}
+
+
+
+// ---------- css-bg ----------//
+.calculator {
+	background-color: $bg-blue;
+}
+
+.section {
+	background-color: $bg-yellow;
+	height: 100vh;
+}
+
+// ---------- css-form ----------//
+
+input {
+	@include form-style ();
+}
+
+// ---------- css ----------//
+
+// calculator
+
+.calculator {
+	position: relative;
+
+	.dollar{
+
+		a{
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	.con-wrap{
+		margin: auto;
+		width: 85vw;
+		height: 100vh;
+		position: relative;
+	
+		.header {
+			display: flex;
+			align-items: center;
+			padding-top : 4em;
+			.left {
+				margin-right: 1em;
+			}
+
+			.right>a{
+				margin-right: 1em;
+			}
+		}
+
+		.middle{
+			color: $bg-white;
+
+			h1 {
+				margin: 0.5em 0;
+			}
+
+			p{
+				line-height: 150%;
+				font-weight: lighter;
+				margin-bottom: 3em;
+			}
+		}
+
+		.main {
+			width: 100%;
+			margin-top: 4em;
+
+			ul{
+				li{
+					@include calculator-form();
+				}
+			}
+
+			.total {
+				@include calculator-total-form();
+				position: absolute;
+				right: 0;
+				bottom: 3em;
+
+				h1 {
+					flex: 0 0 100%;
+					margin-bottom: 0.2em;
+				}
+
+				h3 {
+					flex: 0 0 100%;
+					font-weight: lighter;
+				}
+			}
+
+		}
+
+	}
+}
+
+
+//section (form) //
+
+.section {
+	position: relative;
+
+	.dollar{
+
+		a{
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	.con-wrap{
+		margin: auto;
+		width: 85vw;
+		height: 100vh;
+	
+		.header {
+			display: flex;
+			align-items: center;
+			padding-top : 4em;
+			.left {
+				margin-right: 1em;
+			}
+
+			.right>a{
+				margin-right: 1em;
+			}
+		}
+
+		.middle{
+			color: $bg-white;
+
+			h1 {
+				margin: 0.5em 0;
+			}
+
+			p{
+				line-height: 150%;
+				font-weight: lighter;
+				margin-bottom: 3em;
+			}
+		}
+
+		.main {
+			width: 100%;
+
+		}
+
+		.bottom{
+				position: absolute;
+				right: 0.2em;
+				bottom: 0.5em;
+		}
+	}
+}
+
+
+//section 2 //
+
+.section2 {
+	position:relative;
+
+	.bg-wrap {
+		background-color: $bg-black;
+		position: absolute;
+		width: 100vw;
+		height: 64vh;
+		bottom: 0;
+		left: 0;
+
+		.plus-button {
+			background-color: $bg-white;
+			border-radius: 100%;
+			width: 3.5em;
+			height: 3.5em;
+			position: absolute;
+			top: -2em;
+			right: 3em;
+
+			i{
+				position: absolute;
+				top: 0.5em;
+				right: 0.5em;
+				font-size: 2em;
+
+			}
+		}
+
+		.main {
+
+			ul{
+				li{
+					border-bottom: thin $bg-white dotted;
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 2em;
+					padding-bottom: 0.5em;
+					opacity: 0.5;
+
+					
+				}
+			}
+
+		}
+	}
+
+}

@@ -1,0 +1,430 @@
+// ---------- colors ----------//
+
+$bg-yellow: #F4BC16;
+$bg-black: #222222;
+$bg-white: #fff;
+$bg-red: #C71100;
+$bg-green: #96CF1B;
+$bg-blue: #307EC1;
+
+// ---------- basic setting ----------//
+
+* {
+	padding: 0;
+	margin: 0;
+	font-style: none;
+	border: none;
+	list-style-type: none;
+	text-decoration: none;
+	letter-spacing: 0.03em;
+}
+
+h1, p {
+	padding:0;
+	margin:0;
+}
+
+body {
+	overflow:hidden;
+}
+
+// ---------- buttons setting ----------//
+
+//dollar
+@mixin dollar-button(){
+	background-color: $bg-black;
+	width: 2em;
+	text-align: center;
+	font-size: 2em;
+	padding: 0.35em 0 0.35em 0;
+}
+
+.button-dollar {
+		@include dollar-button();
+		color: $bg-yellow;
+		display: block;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 20;
+}
+
+.button-dollar-t {
+	color: red;
+	position: fixed;
+	left: 1;
+	top: 0;
+	z-index: 25;
+}
+
+.click {color: $bg-blue;}
+
+.calculator>.button-dollar {color: $bg-white; z-index: 0;}
+
+//circle-number
+@mixin number-button(){
+	border: 0.2em $bg-white solid;
+	border-radius: 100%;
+	width: 1.6em;
+	padding: 0.3em 0.1em 0.3em 0.1em;
+	color: $bg-white;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: bolder;
+	margin-right: 0.5em;
+}
+
+.nav>.circle-number {@include number-button();}
+
+//circle-mini
+.nav>.circle-mini {display: flex;}
+
+.nav>.circle-mini>li>a {
+	color: $bg-white;
+	opacity: 0.5;
+	margin-right: 1em;
+	font-size: 0.8em;
+}
+
+//go Prev and Next
+footer{display:flex; justify-content:space-between;}
+footer>a{color:$bg-white;}
+
+//Plus button
+%button-plus {
+	color: $bg-black;
+	background-color: $bg-white;
+	font-size: 2.5em;
+	position: absolute;
+	right: 0.5em;
+	top: -0.8em;
+	border-radius: 100%;
+	padding: 0 0.3em 0.1em 0.3em;
+}
+
+// ---------- text setting ----------//
+
+//name of page
+.name>h1{color:$bg-white;}
+.name>p{color:$bg-white; line-height: 1.5em; font-weight: lighter;}
+
+// ---------- layout ----------//
+
+header {
+	// border: thin red solid;
+	margin: 3em 2em 0 2em;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.3em;
+	}
+
+	.name {
+		h1 {
+			margin-bottom: 0.5em;
+			font-weight: normal;
+			font-size: 1.8em;
+		}
+	}
+}
+
+main {
+	margin-top: 1.5em;
+}
+
+footer {
+	position: absolute;
+	bottom: 1em;
+	width: 100%;
+	a {
+		margin: 0 1.5em;
+	}
+}
+
+%main-setting {
+	padding-top: 2em;
+	padding-bottom: 3em;
+	height: 100%;
+}
+
+// ---------- form ---------- //
+
+%form-input-style {
+	border-radius: 10em;
+	height: 2.5em;
+	width: 100%;
+	text-align: center;
+}
+
+%form-select-style {
+	border-radius: 10em;
+	height: 2.5em;
+	width: 48%;
+	text-align: center;
+}
+
+%list-line-form{
+	border-bottom: thin gray dotted;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1em;
+}
+
+%calculator-form{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2em;
+	padding-bottom: 0.5em;
+	font-size: 1.3em;	
+}
+
+%calculator-total-form{
+	color: $bg-white;
+	// display: flex;
+	// // justify-content: flex-end;
+	// flex-wrap: wrap;
+	text-align: right;
+}
+
+
+// ---------- All section's size ---------- //
+body {position:relative;}
+.section	{height: 100vh; width: 100vw; border: thin $bg-yellow solid; background-color:$bg-yellow; 
+			position: absolute; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;
+			}
+
+.calculator {height: 100vh; width: 100vw; border: thin $bg-blue;
+				position: absolute; background-color:$bg-blue; 
+				-webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+.calculator.show{
+	z-index:10;
+}
+
+.current {z-index: 1;}
+
+// ---------------------ALL SECTION (top)----------------------- //
+
+// section 1
+
+.section1>header {
+		.nav>.circle-mini>li:nth-child(1)>a{
+			opacity: 1;
+			color: black;
+		}
+}
+
+.section1>main{
+	padding: 3.5em 2em;
+
+	input {
+			@extend %form-input-style;
+			margin: 2em 0;
+		}
+}
+
+.section1>footer{
+	.fa-angle-left { display: none; }
+}
+
+// section 2
+
+.section2>header {
+		.nav>.circle-mini>li:nth-child(2)>a{
+			opacity: 1;
+			color: black;
+		}
+}
+
+.section2>main{
+	background-color: $bg-black;
+	position: relative;
+		div.button-plus>a{@extend %button-plus;}
+
+	ul{
+		@extend %main-setting;
+		
+		// li:nth-child(1) {
+		// 	opacity: 1;
+		// }
+
+		li{
+		@extend %list-line-form;
+		margin: 1em 1.5em;
+		opacity: 0.1;
+
+			i:nth-child(1){
+				color: $bg-yellow;
+				font-size: 2.5em;
+				text-align: center;
+				width: 1.5em;
+			}
+			div{
+				margin-right: 5em;
+				margin-top: 0.3em;
+				color: $bg-white;
+				h3, h5 {
+					font-weight: lighter;
+					margin-bottom: 0.3em;
+				}
+			}
+			.fa-info-circle {
+				color: $bg-white;
+				font-size: 1.8em;
+				margin-top: 0.4em;
+			}
+			.fa-check-circle {
+				color: $bg-white;
+				font-size: 2.3em;
+				margin-top: 0.2em;
+				cursor: pointer;
+			}
+		}
+		li:nth-child(4) {
+			border-bottom : none;
+		}
+	}
+}
+
+// section Infor
+
+.sectionInfor>main{
+	background-color: $bg-black;
+	position: relative;
+	div.button-plus>a{@extend %button-plus;}
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+
+	ul{
+		@extend %main-setting;
+		flex: 0 0 100%;
+
+		li{
+
+			@extend %calculator-form;
+			border-bottom: thin $bg-yellow dotted;
+			margin: 2em 1.5em;
+			color: $bg-yellow;		
+		}
+	}
+
+	.total {
+		color: $bg-white;
+		h1,h3 { flex: 0 0 100%; text-align: right; padding-right: 25px; padding-bottom: 0.2em;}
+		margin-bottom: 8em;
+		margin-top: -2em;
+		flex: 0 0 100%;
+
+	}
+}
+
+// section 3
+
+.section3>header {
+		.nav>.circle-mini>li:nth-child(3)>a{
+			opacity: 1;
+			color: black;
+		}
+}
+
+.section3>main{
+	padding: 2em 2em;
+
+	form { display: flex; justify-content: space-between; margin-bottom: 3em;}
+	select {
+			@extend %form-select-style;}
+
+	ul{
+		flex: 0 0 100%;
+
+		li{
+			@extend %calculator-form;
+			border-bottom: thin $bg-white dotted;
+			margin-top: 2em;
+			color: $bg-white;		
+		}
+	}
+
+	.total {
+		color: $bg-white;
+		h1,h3 { flex: 0 0 100%; text-align: right; padding-right: 0; padding-bottom: 0.2em;}
+		margin-bottom: 8em;
+		margin-top: 2em;
+		flex: 0 0 100%;
+
+	}
+}
+
+// section 4
+
+.section4>header {
+		.nav>.circle-mini>li:nth-child(4)>a{
+			opacity: 1;
+			color: black;
+		}
+}
+
+.section4>main{
+	padding: 2em 2em;
+
+	ul{
+		flex: 0 0 100%;
+
+		li{
+			@extend %calculator-form;
+			border-bottom: thin $bg-black dotted;
+			margin-top: 2em;
+			color: $bg-black;
+			div{font-size: 1.3em;}
+		}
+	}
+
+	.total {
+		color: $bg-white;
+		h1,h3 { flex: 0 0 100%; text-align: right; padding-right: 0; padding-bottom: 0.2em;}
+		margin-bottom: 8em;
+		margin-top: 2em;
+		flex: 0 0 100%;
+
+	}
+}
+
+.section4>footer{
+	.fa-angle-right { display: none; }
+}
+
+// calculator
+
+.calculator>main{
+	padding: 2em 2em;
+
+	ul{
+		flex: 0 0 100%;
+
+		li{
+			@extend %calculator-form;
+			border-bottom: thin $bg-white dotted;
+			margin-top: 2em;
+			color: $bg-white;		
+		}
+	}
+
+	.total {
+		color: $bg-white;
+		h1,h3 { flex: 0 0 100%; text-align: right; padding-right: 0; padding-bottom: 0.2em;}
+		// margin-bottom: 8em;
+		margin-top: 2em;
+		flex: 0 0 100%;
+
+	}
+}
+
+// JS
+.selected {
+	color: $bg-yellow !important;
+}
+
+.opacity {
+	opacity: 1 !important;
+}
